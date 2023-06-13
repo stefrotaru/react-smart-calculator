@@ -1,0 +1,40 @@
+.calculator {
+    position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 0.55rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.9px);
+  -webkit-backdrop-filter: blur(4.9px);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+
+  .display {
+    word-break: break-all;
+    font-size: 2rem;
+    padding: 1.5rem;
+    text-align: right;
+
+    span {
+      font-size: 1rem;
+      color: #888;
+    }
+  }
+}
+
+.history {
+    position: relative;
+  word-break: break-all;
+  padding: .2em .5em;
+  background: rgba(255, 255, 255, 0.13);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 0.55rem;
+  backdrop-filter: blur(4.9px);
+  -webkit-backdrop-filter: blur(4.9px);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+  animation: slide-in 0.7s ease-in;
+
+  .history_title {
+    font-size: 1.5em;
+    padding: 0 1em 1em 1em;
+  }
+}
