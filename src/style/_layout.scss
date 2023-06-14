@@ -26,6 +26,9 @@
   }
 
   .calculator {
+    position: relative;
+    z-index: 2;
+    max-width: 35rem;
     .operators {
       display: flex;
       align-items: stretch;
@@ -43,6 +46,12 @@
         flex: 1 1 33.333%;
         max-width: 33.333%;
       }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .history {
+        height: 19em;
     }
   }
 }

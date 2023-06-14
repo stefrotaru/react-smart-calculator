@@ -1,5 +1,4 @@
 .calculator {
-    position: relative;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.13);
   border-radius: 0.55rem;
@@ -7,6 +6,8 @@
   backdrop-filter: blur(4.9px);
   -webkit-backdrop-filter: blur(4.9px);
   border: 1px solid rgba(255, 255, 255, 0.19);
+  max-width: 23rem;
+  transition: all .7s ease-in;
 
   .display {
     word-break: break-all;
@@ -22,9 +23,7 @@
 }
 
 .history {
-    position: relative;
   word-break: break-all;
-  padding: .2em .5em;
   background: rgba(255, 255, 255, 0.13);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border-radius: 0.55rem;

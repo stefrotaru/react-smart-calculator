@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 
 function CalculatorHistory(props) {
-    console.log(props.result)
     let showHistory = props.previousEntries[0]
 
     return (

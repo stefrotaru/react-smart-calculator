@@ -1,7 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import CalculatorHistory from "./CalculatorHistory";
-
-// import CalculatorButtons from "./CalculatorButtons";
 
 function Calculator() {
   const [calc, setCalc] = useState("");
@@ -9,17 +7,15 @@ function Calculator() {
   const [previousEntries, setPreviousEntries] = useState([]);
   const [resetCalc, setResetCalc] = useState(false);
 
-  //   console.log(previousEntries);
-    console.log(previousEntries)
-  //   console.log(result)
-
   useEffect(() => {
-    if (previousEntries.length > 3) {
+    if (previousEntries.length > 6) {
+      const newArr = [...previousEntries]
+      newArr.shift()
 
-
-      setPreviousEntries()
+      console.log(newArr)
+      setPreviousEntries(newArr)
     }
-  }, [previousEntries])
+  }, [previousEntries, setPreviousEntries])
 
   const operators = ["/", "*", "+", "-", "."];
 
@@ -38,7 +34,6 @@ function Calculator() {
       }
       setCalc(value);
       setResult(value);
-      console.log('calc: ', calc)
       return;
     }
     
@@ -67,14 +62,18 @@ function Calculator() {
   };
 
   const checkIfOperation = () => {
+    let check = false;
     operators.forEach(operator => {
-        return calc.includes(operator)
+      if (calc.includes(operator)) {
+        return check = true
+      }
     })
+    return check
   }
 
   const calculate = () => {
-
-    if(!result || checkIfOperation()) {
+    console.log('checkIfOperation: ', checkIfOperation())
+    if(!result || !checkIfOperation()) {
         return;
     }
 
